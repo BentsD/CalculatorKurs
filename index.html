@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/light.css" id="theme" />
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header-container">
+                <h1>Калькулятор</h1>
+                <button type="button" onclick="changeTheme()" class="theme-button">
+                    <img src="assets/SunIcon.svg" alt="Theme Icon" height="19" width="19" id="theme-icon">
+                </button>
+            </div>
+
+            <div class="result">
+                <input type="text" name="result" id="result" readonly />
+                <input type="button" value="C" onclick="result.value=''" id="clear-button" />
+            </div>
+
+            <div class="calculator">
+                <div class="buttons">
+                    <input type="button" value="(" onclick="liveScreen('(')" />
+                    <input type="button" value=")" onclick="liveScreen(')')" />
+                    <input type="button" value="log" onclick="log()" />
+                    <input type="button" value="!" onclick="factorial()" />
+                    <input type="button" value="⌫" onclick="deleteLast()" />
+                    <input type="button" value="√" onclick="sqrt()" />
+                    <input type="button" value="^" onclick="pow()" />
+                    <input type="button" value="sin" onclick="sin()" />
+                    <input type="button" value="cos" onclick="cos()" />
+                    <input type="button" value="tan" onclick="tan()" />
+                    <input type="button" value="7" onclick="liveScreen(7)" />
+                    <input type="button" value="8" onclick="liveScreen(8)" />
+                    <input type="button" value="9" onclick=" liveScreen(9)" />
+                    <input type="button" value="x" onclick="liveScreen('*')" />
+                    <input type="button" value="/" onclick="liveScreen('/')" />
+                    <input type="button" value="4" onclick=" liveScreen(4)" />
+                    <input type="button" value="5" onclick=" liveScreen(5)" />
+                    <input type="button" value="6" onclick=" liveScreen(6)" />
+                    <input type="button" value="-" onclick="liveScreen('-')" />
+                    <input type="button" value="cot" onclick="cot()" />
+                    <input type="button" value="1" onclick="liveScreen(1)" />
+                    <input type="button" value="2" onclick="liveScreen(2)" />
+                    <input type="button" value="3" onclick="liveScreen(3)" />
+                    <input type="button" value="+" onclick="liveScreen('+')" />
+                    <input type="button" value="=" onclick="calculate(result.value)" />
+                    <input type="button" value="%" onclick="percentage()" />
+                    <input type="button" value="0" onclick="liveScreen(0)" />
+                    <input type="button" value="." onclick="liveScreen('.')" />
+                    <input type="button" value="copy" onclick="saveResult()" />
+                    <input type="button" value="paste" onclick="insertSavedResult()" />
+                </div>
+            </div>
+        </div>
+        <div class="history-container">
+            <h1>История</h1>
+            <div class="history" id="history"></div>
+            <input type="button" id="clear-history" value="Clear" onclick="clearHistory()">
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
